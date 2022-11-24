@@ -17,13 +17,13 @@ class Btn extends StatelessWidget {
       required this.child,
       required this.color,
       required this.textColor})
-      : assert(height > width);
+      : assert(height <= width);
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-        height: 10,
-        width: 10,
+        height: height,
+        width: width,
         child: MaterialButton(
           color: color,
           textColor: textColor,
